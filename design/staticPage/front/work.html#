@@ -1,0 +1,344 @@
+<!doctype html><head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Studio Stare</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/lrtk.css">
+<link href="video-js.css" rel="stylesheet" type="text/css">
+<!-- ICONS -->
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<!-- MOBILE META -->
+<meta name="viewport" content="width=device-width"/>
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, minimum-scale=0.8, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta itemprop="name" content="Studio Stare" >
+<meta itemprop="description" content="">
+<!--[if lt IE 9]>
+	<script src="js/libs/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+
+<header id="main_header">
+  <div class="center">
+    <nav id="main_nav">
+      <ul>
+         <li><a href="work.html">work</a><font>&nbsp;/&nbsp;</font></li>
+        <li><a href="news.html">news</a><font>&nbsp;/&nbsp;</font></li>
+        <li><a href="clients.html">clients</a><font>&nbsp;/&nbsp;</font></li>
+        <li><a href="about.html">about</a><font>&nbsp;/&nbsp;</font></li>
+      </ul>
+    </nav>
+    <a href="/en/home/" class="logo"> <img src="img/logo.png" alt=""> </a> <span class="clearfix"></span> </div>
+</header>
+<div id="body"> 
+  <!-- videobox-->
+  <div id="videoplaybigbox-id1" class="videoplaybigbox" style="display: none">
+    <div class="videoplaybox">
+      <video id="video-id1" class="video-js vjs-default-skin" controls preload="none" 
+				poster="http://video-js.zencoder.com/oceans-clip.png" data-setup="{}">
+        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+        <track kind="captions" src="demo.captions.vtt" srclang="en" label="English" ></track>
+        Tracks need an ending tag thanks to IE9
+        <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track>
+        Tracks need an ending tag thanks to IE9 </video>
+      <div class="sharebigbox"> 
+        <!-- <div class="sharebtn"><img src="img/screen.png" width="49" height="47"></div>-->
+        <div class="sharebox">
+          <div class="shareicon" style="display: none;"> <img src="img/facebook.png"> <img
+								src="img/sinaweibo.png"> <img
+								src="img/twitter.png"> <img
+								src="img/linkedin.png"> </div>
+          <div class="sharefont"> <img src="img/share.png"></div>
+        </div>
+      </div>
+    </div>
+    <div class="videoplayinfos">
+      <div class="infos_left">
+        <h1>THE STARS</h1>
+        <font> / </font>
+        <h2>CORPORATE</h2>
+      </div>
+      <div class="infos_right">Description project. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum  mauris vitae erat consequat auctor eu in elit. gravida nibh vel velit auctor aliquet. / Duration 06:12.</div>
+    </div>
+  </div>
+  <!-- videobox-->
+  <div id="videoplaybox-id2" class="videoplaybigbox" style="display: none">
+    <div class="videoplaybox">
+      <video id="video-id2" class="video-js vjs-default-skin" controls preload="none" 
+				poster="http://video-js.zencoder.com/oceans-clip.png" data-setup="{}">
+        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+        <track kind="captions" src="demo.captions.vtt" srclang="en" label="English" ></track>
+        Tracks need an ending tag thanks to IE9
+        <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track>
+        Tracks need an ending tag thanks to IE9 </video>
+      <div class="sharebigbox"> 
+        <!-- <div class="sharebtn"><img src="img/screen.png" width="49" height="47"></div>-->
+        <div class="sharebox">
+          <div class="shareicon" style="display: none;"> <img src="img/facebook.png"> <img
+								src="img/sinaweibo.png"> <img
+								src="img/twitter.png"> <img
+								src="img/linkedin.png"> </div>
+          <div class="sharefont"> <img src="img/share.png"><font>Share</font> </div>
+        </div>
+      </div>
+    </div>
+    <div class="videoplayinfos"> 
+      <!-- <p class="title">PC WORLD - IPAD AIR</p>
+				<p class="subtitle">Directed by Saam Farahmand</p> --> 
+    </div>
+  </div>
+  <div class="videobigbox">
+    <div class="videobox"> <img src="img/temp/workimg01.jpg"></img>
+      <div class="sharebigbox">
+        <div class="sharebtn"><img src="img/screen.png"onclick="playvideofull('id2');"></div>
+        <div class="sharebox">
+          <div class="shareicon" style="display: none;"> <img src="img/facebook.png"/> <img src="img/sinaweibo.png"/> <img src="img/twitter.png"/> <img src="img/linkedin.png"/> </div>
+          <div class="sharefont"> <img src="img/share.png"/></div>
+        </div>
+      </div>
+      <div class="playbox">
+        <div class="playbtn" style="display: none;"> <img src="img/play-button.png" onclick="playvideo('id1');"> </div>
+      </div>
+    </div>
+    <div class="infos">
+      <p class="title">PC WORLD - IPAD AIR</p>
+      <p class="subtitle">Directed by Saam Farahmand</p>
+    </div>
+  </div>
+  <div class="videobigbox">
+    <div class="videobox"> <img src="img/temp/workimg02.jpg"></img>
+      <div class="sharebigbox">
+        <div class="sharebtn"><img src="img/screen.png" onclick="playvideofull('id2');"></div>
+        <div class="sharebox">
+          <div class="shareicon" style="display: none;"> <img src="img/facebook.png"/> <img src="img/sinaweibo.png"/> <img src="img/twitter.png"/> <img src="img/linkedin.png"/> </div>
+          <div class="sharefont"> <img src="img/share.png"/></div>
+        </div>
+      </div>
+      <div class="playbox">
+        <div class="playbtn" style="display: none;"> <img src="img/play-button.png"onclick="playvideo2('id2');"> </div>
+      </div>
+    </div>
+    <div class="infos">
+      <p class="title">PC WORLD - IPAD AIR</p>
+      <p class="subtitle">Directed by Saam Farahmand</p>
+    </div>
+  </div>
+  <div class="videobigbox">
+    <div class="videobox"> <img src="img/temp/workimg02.jpg"></img>
+      <div class="sharebigbox">
+        <div class="sharebtn"><img src="img/screen.png" onclick="playvideofull('id2');"></div>
+        <div class="sharebox">
+          <div class="shareicon" style="display: none;"> <img src="img/facebook.png"/> <img src="img/sinaweibo.png"/> <img src="img/twitter.png"/> <img src="img/linkedin.png"/> </div>
+          <div class="sharefont"> <img src="img/share.png"/></div>
+        </div>
+      </div>
+      <div class="playbox">
+        <div class="playbtn" style="display: none;"> <img src="img/play-button.png"onclick="playvideo2('id2');"> </div>
+      </div>
+    </div>
+    <div class="infos">
+      <p class="title">PC WORLD - IPAD AIR</p>
+      <p class="subtitle">Directed by Saam Farahmand</p>
+    </div>
+  </div>
+  <div class="videobigbox">
+    <div class="videobox"> <img src="img/temp/workimg02.jpg"></img>
+      <div class="sharebigbox">
+        <div class="sharebtn"><img src="img/screen.png" onclick="playvideofull('id2');"></div>
+        <div class="sharebox">
+          <div class="shareicon" style="display: none;"> <img src="img/facebook.png"/> <img src="img/sinaweibo.png"/> <img src="img/twitter.png"/> <img src="img/linkedin.png"/> </div>
+          <div class="sharefont"> <img src="img/share.png"/></div>
+        </div>
+      </div>
+      <div class="playbox">
+        <div class="playbtn" style="display: none;"> <img src="img/play-button.png"onclick="playvideo2('id2');"> </div>
+      </div>
+    </div>
+    <div class="infos">
+      <p class="title">PC WORLD - IPAD AIR</p>
+      <p class="subtitle">Directed by Saam Farahmand</p>
+    </div>
+  </div>
+  <div class="videobigbox">
+    <div class="videobox"> <img src="img/temp/workimg02.jpg"></img>
+      <div class="sharebigbox">
+        <div class="sharebtn"><img src="img/screen.png" onclick="playvideofull('id2');"></div>
+        <div class="sharebox">
+          <div class="shareicon" style="display: none;"> <img src="img/facebook.png"/> <img src="img/sinaweibo.png"/> <img src="img/twitter.png"/> <img src="img/linkedin.png"/> </div>
+          <div class="sharefont"> <img src="img/share.png"/></div>
+        </div>
+      </div>
+      <div class="playbox">
+        <div class="playbtn" style="display: none;"> <img src="img/play-button.png"onclick="playvideo2('id2');"> </div>
+      </div>
+    </div>
+    <div class="infos">
+      <p class="title">PC WORLD - IPAD AIR</p>
+      <p class="subtitle">Directed by Saam Farahmand</p>
+    </div>
+  </div>
+  <div class="videobigbox">
+    <div class="videobox"> <img src="img/temp/workimg02.jpg"></img>
+      <div class="sharebigbox">
+        <div class="sharebtn"><img src="img/screen.png" onclick="playvideofull('id2');"></div>
+        <div class="sharebox">
+          <div class="shareicon" style="display: none;"> <img src="img/facebook.png"/> <img src="img/sinaweibo.png"/> <img src="img/twitter.png"/> <img src="img/linkedin.png"/> </div>
+          <div class="sharefont"> <img src="img/share.png"/></div>
+        </div>
+      </div>
+      <div class="playbox">
+        <div class="playbtn" style="display: none;"> <img src="img/play-button.png"onclick="playvideo2('id2');"> </div>
+      </div>
+    </div>
+    <div class="infos">
+      <p class="title">PC WORLD - IPAD AIR</p>
+      <p class="subtitle">Directed by Saam Farahmand</p>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="center">
+    <div class="c1">
+      <div class="line_fl"></div>
+      <div class="imgbox"><img src="img/foot.png" alt="" /></div>
+      <div class="line_fr"></div>
+    </div>
+    <div class="footfont"> <font class="demi">address</font>71 West Suzhou Road - room 401
+      Jing’an District - 200040 Shanghai - China<br>
+      <font
+					class="demi">contact</font> <font class="book">phone</font> +86 (0)
+      21 6276 0052 <font class="book">email</font> contact@studiostare.com </div>
+    <div class="fllowus">
+      <h1>follow us</h1>
+      <div class="fllowuslink"> <img src="img/facebook.jpg"> <img src="img/vimeo.jpg"> <img src="img/twitter.jpg"> <img src="img/linkedin.jpg"> </div>
+    </div>
+  </div>
+</footer>
+<script src="js/libs/html5shiv.js"></script> 
+<script src="js/video.js"></script> 
+<script>videojs.options.flash.swf = "swf/video-js.swf";</script> 
+<script src="js/jquery.min.js"></script> 
+<script>
+	   var warp_pro=document.getElementsByClassName("sharebox");
+	   for (i=0;i<warp_pro.length;i++)
+	   {
+		 warp_pro[i].onmouseover=sharebox_action;
+		 warp_pro[i].onmouseout=sharebox_move;
+		 warp_pro[i].getElementsByClassName("shareicon")[0].style.display="none";
+		}
+       function sharebox_action(){
+		   this.getElementsByClassName("shareicon")[0].style.display="block";
+		   }
+		function sharebox_move(){
+		   this.getElementsByClassName("shareicon")[0].style.display="none";
+		   }
+
+		var videoboxs=document.getElementsByClassName("videobox");
+		 for (i=0;i<videoboxs.length;i++)
+		   {
+			 videoboxs[i].onmouseover=videobuttons_action;
+			 videoboxs[i].onmouseout=videobuttons_move;
+			 videoboxs[i].getElementsByClassName("playbtn")[0].style.display="none";
+			}
+	       function videobuttons_action(){
+			   this.getElementsByClassName("playbtn")[0].style.display="block";
+			   }
+			function videobuttons_move(){
+			   this.getElementsByClassName("playbtn")[0].style.display="none";
+			   }
+
+		function playvideo(videoid){
+			var videoboxes = document.getElementsByClassName("videoplaybigbox");
+			for(i=0;i<videoboxes.length;i++)
+				videoboxes[i].style.display="none";
+			var videos = document.getElementsByTagName("video");
+			for(i=0;i<videos.length;i++)
+				videos[i].pause();
+			var videobox = document.getElementById("videoplaybigbox-" + videoid);
+			videobox.style.display="block";
+			// videobox.getElementsByTagName("video")[0].play();
+			_V_("video-"+videoid).play();
+			}
+		
+		function playvideofull(videoid){
+			var videoboxes = document.getElementsByClassName("videoplaybigbox");
+			for(i=0;i<videoboxes.length;i++)
+				videoboxes[i].style.display="none";
+			var videos = document.getElementsByTagName("video");
+			for(i=0;i<videos.length;i++)
+				videos[i].pause();
+			var videobox = document.getElementById("videoplaybigbox-" + videoid);
+			videobox.style.display="block";
+			// videobox.getElementsByTagName("video")[0].enterFullScreen();
+			_V_("video-"+videoid).requestFullScreen();
+			_V_("video-"+videoid).play();
+			}
+
+		function playvideo_old(src,title,subtitle){
+			var videodoc = document.createElement("video");
+			videodoc.className = "video-js vjs-default-skin";
+			videodoc.id = "example_video_1";
+			videodoc.poster = src + ".png";
+			videodoc.controls = "controls";
+			// videodoc.preload="none";
+			videodoc.autoplay = "autoplay";
+
+			var srcdoc1 = document.createElement("source");
+			srcdoc1.src = src + ".mp4";
+			srcdoc1.type = 'video/mp4';
+			videodoc.appendChild(srcdoc1);
+			var srcdoc2 = document.createElement("source");
+			srcdoc2.src = src + ".webm";
+			srcdoc2.type='video/webm';
+			videodoc.appendChild(srcdoc2);
+			var srcdoc3 = document.createElement("source");
+			srcdoc3.src = src + ".ogv";
+			srcdoc3.type='video/ogg';
+			videodoc.appendChild(srcdoc3);
+			var trackdoc1 = document.createElement("track");
+			trackdoc1.kind = "captions";
+			trackdoc1.src = "demo.captions.vtt";
+			trackdoc1.srclang="en";
+			trackdoc1.label="English";
+			videodoc.appendChild(trackdoc1);
+			var trackdoc2 = document.createElement("track");
+			trackdoc2.kind = "subtitles";
+			trackdoc2.src = "demo.captions.vtt";
+			trackdoc2.srclang="en";
+			trackdoc2.label="English";
+			videodoc.appendChild(trackdoc2);
+
+			var videos = document.getElementsByClassName("videoplaybox")[0].getElementsByTagName("video");
+			for(i = 0 ; i < videos.length; i++)
+				document.getElementsByClassName("videoplaybox")[0].removeChild(videos[i]);
+			document.getElementsByClassName("videoplaybox")[0].appendChild(videodoc);
+			document.getElementsByClassName("videoplaybigbox")[0].style.display="block";
+
+			var pdoc1 = document.createElement("p");
+			pdoc1.class = "title";
+			pdoc1.innerHTML= title;
+			var pdoc2 = document.createElement("p");
+			pdoc2.class = "subtitle";
+			pdoc2.innerHTML = subtitle;
+			//pdoc2.innerText=subtitle; 
+			/* var infos = document.getElementsByClassName("videoplayinfos")[0].getElementsByTagName("p");
+			for(j = 0 ; j < infos.length; j++)
+				document.getElementsByClassName("videoplayinfos")[0].removeChild(infos[j]); */
+			document.getElementsByClassName("videoplayinfos")[0].innerHTML = "";
+			document.getElementsByClassName("videoplayinfos")[0].appendChild(pdoc1);
+			document.getElementsByClassName("videoplayinfos")[0].appendChild(pdoc2);	
+			}
+		
+       </script>
+</body>
+</html>

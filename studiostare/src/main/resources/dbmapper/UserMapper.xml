@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里的namespace名字必须为执行该sql的dao地址 -->
+<mapper namespace="com.flamingo.studiostare.dao.UserDao">
+
+	<resultMap type="UserEntity" id="userResultMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="password" column="password" />
+		<result property="email" column="email" />
+		<result property="roleId" column="role_id" />
+		<result property="captureNewsFlag" column="capture_news_flag" />
+		<result property="twitterUser" column="twitter_user" />
+		<result property="updateTime" column="update_time" />
+	</resultMap>
+
+	<select id="getUserById" parameterType="int" resultType="UserEntity"
+		resultMap="userResultMap">
+        <![CDATA[ 
+            select * from user where id = #{id}
+        ]]>
+	</select>
+
+</mapper>

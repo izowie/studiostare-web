@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里的namespace名字必须为执行该sql的dao地址 -->
+<mapper namespace="com.flamingo.studiostare.dao.VideoDao">
+
+	<resultMap type="VideoEntity" id="videoResultMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="videoPath" column="video_path" />
+		<result property="description" column="description" />
+		<result property="updateTime" column="update_time" />
+	</resultMap>
+
+	<select id="getVideoById" parameterType="int" resultType="VideoEntity"
+		resultMap="videoResultMap">
+        <![CDATA[ 
+            select * from video where id = #{id}
+        ]]>
+	</select>
+
+</mapper>

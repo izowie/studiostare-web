@@ -1,0 +1,283 @@
+@import "reset.css";
+@import "font.css";
+@import "ui-media.css";
+/*==========WORK START==========*/
+#body{width:80%; margin: 3em auto 0 auto; max-width:1490px;overflow: hidden;}
+.ajaxContainer{margin:42px auto 0 auto;}
+.noAnim {
+	-webkit-transition: all, 0, ease-in, 0 !important;
+}
+.noSelection {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.whitelogo {
+	position: absolute;
+	top: 8em;
+	left: 3em;
+	z-index: 1;
+	display: block;
+	width: 16em;
+	height: 8em;
+}
+.whitelogo img{width:100%;}
+.center {
+	margin: 0 auto;
+	position: relative;
+}
+video {
+	width: 100%;
+}
+#error404 {
+	font-size: 30px;
+	font-family: 'Gotham Bold';
+	text-align: center;
+}
+#error404 p span {
+	font-size: 200px;
+	line-height: 180px;
+	display: block;
+}
+#home .undisplayed, #director .undisplayed {
+	text-align: center;
+	display: block;
+	width: 500px;
+	overflow: hidden;
+	position: relative;
+}
+#home .undisplayed h1, #director .undisplayed h1 {
+	font-size: 14px;
+	margin-top: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#home .undisplayed h2,  #director .undisplayed h2 {
+	font-size: 12px;
+	color: #898989;
+	margin-bottom: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* PROJECT THUMB */
+.videoplaybox{width:100%; overflow:hidden; position:relative;}
+.videobigbox{width:49%; margin:0 2% 0 0;  float:left; max-width: 730px;overflow:hidden;}
+.videobigbox:nth-last-child(2n-1){margin:0;}
+.videobox{width:100%; position:relative;float: left;}
+.videobox img{width:100%;max-width: 730px;}
+.videosize{width:100%; height:10em;}
+.fr{float:right;}
+.sharebigbox{width: 15.4em; position:absolute; z-index:1; right:0; bottom: 1em;}
+.sharebox{max-width: 13em; min-width: 6em;position:absolute; z-index:1; right: 1.4em; bottom: 0.4em; cursor:pointer;}
+.shareicon{width:2.4em; overflow: hidden;}
+.shareicon img{width:100%; margin:0 0 0.4em 0}
+.sharefont{ overflow: hidden;}
+.sharefont img{width: 100%; float:left;max-width: 106px;}
+.sharebtn{ width: 4.1em;height: 3.9em; float: left;}
+.sharebtn img{width:100%;height: 100%;max-width: 49px;max-height: 47px;}
+.title {
+	font: 2.4em/1.2em 'itcavantgardestd-bold';
+	color: #4a4a4a;
+}
+.subtitle {
+	font: 2.4em/1.4em 'itcavantgardestd-md';
+	color: #898989;
+	margin-bottom: 18px;
+	text-transform: capitalize;
+}
+.infos {
+	width: 100%;
+	float: left;
+	color: #000;
+	margin-top: 1.6em;
+	line-height: 21px;
+	margin-bottom: 35px;
+}
+.videoplayinfos {
+width: 100%;
+margin: 4em 0 5em 0;
+overflow: hidden;}
+.infos_left{float:left; width:30%;}
+.infos_left h1{float:left; font:3em/1.4em 'itcavantgardestd-bold';}
+.infos_left h2{float:left; font:3em/1.4em 'itcavantgardestd-md'; text-transform:capitalize}
+.infos_left font{float:left; font:3em/1.4em 'itcavantgardestd-md';}
+.infos_right{float:right; font:2em/1.4em 'itcavantgardestd-md'; width:60%;text-transform:capitalize}
+.arrow {
+	display: block;
+	width: 10em;
+	height: 9em;
+	min-width:60px;
+	min-height:48px;
+	position: absolute;
+	bottom: 18%;
+	left: 50%;
+	margin-left: -5em;
+	background: url(../img/screen-arrow.png) no-repeat;
+	background-size: 100%;
+}
+
+/*==========NEWS START==========*/
+/* wrapper css */
+.aboutbox, .clientsbox, #wrapper, .submainbox{
+}
+#wrapper hgroup{
+	text-align:center;
+}
+#wrapper h2{
+	margin:5px 0;
+	color:#FF6D99;
+	text-shadow:1px 1px 2px #A50031;
+	font-size:33px;
+	font-family:Arial Narrow, Arial, sans-serif;
+}
+#wrapper h3{
+	font-style:italic;
+	font-weight:normal;
+	font-size:18px;
+	text-shadow:1px 1px 0 #fff;
+	color:#888;
+	margin:5px 0;
+}
+
+#container{
+	position:relative;
+	width:100%;
+	margin: 0 auto;
+	
+}
+.grid{
+	width:481px;
+	min-height:100px;
+	background:#fff;
+	font-size:12px;
+	float:left;
+	-webkit-transition: top 1s ease, left 1s ease;
+	-moz-transition: top 1s ease, left 1s ease;
+	-o-transition: top 1s ease, left 1s ease;
+	-ms-transition: top 1s ease, left 1s ease;
+	border-bottom: solid 2px #000;
+}
+.grid img.twitter{position:absolute; top:-0.2em;width: 10%!important;}
+.grid font {
+	font: lighter 1.8em/1em 'tcavantgardestd-bk'; color:#000; text-transform:capitalize; 
+}
+.imgholder{margin:0 0 25px 0;overflow: hidden;}
+.grid font.twitterfont{
+	margin: 0.2em 0 0 2em;
+float: left;
+}
+.grid strong {
+	margin:10px 0;
+	display:block;
+	padding:0 0 5px;
+	font: 2.4em/1em 'itcavantgardestd-bold';color:#000; 
+}
+.grid p {
+	font: 1.8em/1.4em 'tcavantgardestd-bk';color:#333132; 
+	margin: 0.6em 0 1em 0; text-transform:none;
+}
+.grid p.news_twitter {
+	font: bolder 1.8em/1.4em 'itcavantgardestd-demi';color:#333132; float: left;
+}
+.grid .meta{
+	text-align:right;
+	color:#777;
+	font-style:italic;
+}
+.grid .imgholder img{
+	width:100%;
+	background:#ccc;
+	display:block;
+}
+
+@media screen and (max-width : 1240px) {
+	body{
+		overflow:auto;
+	}
+}
+@media screen and (max-width : 900px) {
+	#backlinks{
+		float:none;
+		clear:both;
+	}
+	#backlinks a{
+		display:inline-block;
+		padding-right:20px;
+	}
+	#wrapper{
+		margin-top:90px;
+	}
+}
+/*==========NEWS END==========*/
+/*==========CLIENTS START==========*/
+.clients_box,.clientsbanner{width:100%; overflow:hidden;}
+.clientsbanner img{width:100%;max-width: 1490px;}
+.clientsnav_box{width:100%; overflow:hidden; margin:30px 0 0 0;}
+.clientsnav{width: 74%; overflow:hidden; float:left;}
+.clientsnav a{font: 3em/1.4em 'itcavantgardestd-bold';text-transform:Uppercase; color:#000;letter-spacing: 0;}
+.clientsnav a:hover{color:#7dc399;}
+.clientsnav font {
+	color: #000;
+	font: 2.9em/1.4em 'itcavantgardestd-md';
+}
+.clientssubnav{width: 16%; overflow:hidden; float:right}
+.clientssubnav h1{width:100%; height:1.5em; background:#000; color: #fff;
+	font: 2em/1.5em 'itcavantgardestd-bold'; text-indent:0.4em; text-transform:uppercase;
+}
+.clientssubnav a{width:100%; float:left; height:1.5em;font: 2.2em/1.6em 'itcavantgardestd-demi';text-indent:0.2em; color:#000; text-transform:lowercase;}
+.clientssubnav a:hover{color:#73c69c;}
+.clientssubnav a:hover font{color:#747373;}
+
+/*==========CLIENTS END==========*/
+/*==========ABOUT START==========*/
+.aboutbox,.clientsbox,#wrapper,.submainbox{margin: 3em auto 0 auto; width:80%;max-width:1490px;overflow: hidden;}
+.aboutbanner_box,.aboutbanner{width:100%; overflow:hidden;}
+.aboutbanner img{width:100%;}
+.aboutbanner_font{width:100%; overflow:hidden;margin: 3.6em 0 0 0;}
+.aboutbanner_font h1{font: 3em/1.4em 'itcavantgardestd-bold';text-transform:Uppercase;letter-spacing: 0;}
+.aboutbanner_font font{color:#747373}
+.whobox{width:100%; overflow:hidden;}
+.whobox dl dt{font: 3em/1em 'itcavantgardestd-bold';color:#747373; margin: 3em 0 0.8em 0;text-transform:Uppercase;letter-spacing: 0;}
+.whobox dl dd{width:100%;overflow: hidden;}
+.who_list{width: 23.6%; margin: 0 1.4% 30px 0; float:left;}
+.who_list:last-of-type{margin:0 0 0 0;}
+.who_imgbox{}
+.who_imgbox img{width:100%;max-width: 351px;}
+.who_list h2{font: 2.4em/1.5em 'itcavantgardestd-bold';text-transform:Uppercase;margin: 0.8em 0 0 0;}
+.who_list h3{font: 1.8em/1.2em 'itcavantgardestd-demi'; margin: 0 0 0 0;text-transform:Uppercase;}
+.who_list h4{font: 1.8em/1.8em 'itcavantgardestd-md'; margin: 0 0 0.6em 0;text-transform:Uppercase;}
+
+.manifesto{width:100%; overflow:hidden; margin: 60px 0 0 0;}
+.manifesto dl dt{font: 3em/1em 'itcavantgardestd-bold';color:#73c69c; margin:0 0 20px 0;text-transform:Uppercase;}
+.manifesto dl dd{font: 2.7em/1.6em 'itcavantgardestd-bold';color:#747373; text-transform:Uppercase;letter-spacing: -0.4px;}
+/*==========ABOUT END==========*/
+/*==========SUBNAV START==========*/
+
+.submain_imgbox{width:32%; float:left; margin: 0 2% 30px 0;overflow: hidden;}
+.submain_imgbox:nth-last-child(3n+1){margin:0}
+
+.submain_img{width:100%; position:relative;}
+.submain_img img{width:100%; max-width:476px;}
+
+.subfont01 h1{font: 2.4em/1em 'itcavantgardestd-bold'; float:left;}
+.subfont01 font{float:left;}
+.subfont01 h2{font: 2.4em/1.2em 'itcavantgardestd-md'; float:left;}
+.subfont02 h3{font: 2.4em/1.2em 'itcavantgardestd-md'; text-transform: capitalize;}
+.subfontbox{float:left; width:100%;margin: 2em 0 0 0;}
+.subfontbox font{font: 2.4em/1.2em 'itcavantgardestd-md';}
+.subfontbox .subfont01{float:left; width:100%;}
+.subfontbox .subfont02{float:left; width:100%;}
+
+/*==========SUBNAV END==========*/
+
+.scroll_top{position:fixed; right:20px; bottom:50px; width:50px; height:50px; text-align:center; line-height:50px; cursor:pointer}
+
+.scroll_top a{width:58px; height:58px; display:block; background:url(../img/top.png) no-repeat; margin:2px 0;}
+.scroll_top a:hover{background:url(../img/tophover.png) no-repeat;}
+.scroll_top a.homebtn{background:url(../img/home.png) no-repeat;}
+.scroll_top a.homebtn:hover{background:url(../img/homehover.png) no-repeat;}

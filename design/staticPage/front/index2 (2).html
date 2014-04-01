@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Studio Stare</title>
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/libs/html5shiv.js"></script>
+<!-- video -->
+<link href="video-js.css" rel="stylesheet" type="text/css">
+<script src="js/video.js"></script>
+<script>videojs.options.flash.swf = "swf/video-js.swf";</script>
+<script src="js/jquery.min.js"></script>
+
+<!-- ICONS -->
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" href="css/lrtk.css">
+<!-- MOBILE META -->
+<meta name="viewport" content="width=device-width"/>
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, minimum-scale=0.8, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta itemprop="name" content="Studio Stare" >
+<meta itemprop="description" content="">
+<!--[if lt IE 9]>
+	<script src="js/libs/html5shiv.js"></script>
+	<![endif]-->
+<script src="js/slider.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+		$(window).load(function() {
+			$('.flexslider').flexslider();
+		});
+		
+		var scrollFunc=function(e){
+    var direct=0;
+    e=e || window.event;
+    if(e.wheelDelta){//IE/Opera/Chrome/safari
+        if(e.wheelDelta == -3){
+        	self.location='work.html';
+        }
+    }else if(e.detail){//Firefox
+        if(e.detail == 2){
+        	self.location='work.html';
+        }
+    }
+}
+/*注册事件*/
+if(document.addEventListener){
+    document.addEventListener('DOMMouseScroll',scrollFunc,false);
+}//W3C
+window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
+
+</script>
+
+
+</head>
+<body>
+	<div class="flexslider" onClick="location='work.html'"
+		data-spy="scroll" data-target=".scroll">
+		<ul class="slides">
+			<li id="randomimg" />
+		</ul>
+		<span class="arrow" onClick="location='work.html'"></span>
+	</div>
+	<script>
+		var m=10; //随机显示图片的总数量
+		var n=Math.floor(Math.random()*m);
+		var p = "";
+		switch(n)
+		{
+		case 1:
+		  p = "<div class='infos'><p>Come as you are</p></div>";
+		  break;
+		case 2:
+		  p = "<div class='infos'><p>Listen</p></div>";
+		  break;
+		case 3:
+		  p = "<div class='infos'><p>If you don’t like your job, <br> get a new one</p></div>";
+		  break;
+		case 4:
+		  p = "<div class='infos'><p>You don’t have to love everyone</p></div>";
+		  break;
+		case 5:
+		  p = "<div class='infos'><p>Don't be cynical</p></div>";
+		  break;
+		case 6:
+		  p = "<div class='infos'><p>Love your project and it will <br> love you back</p></div>";
+		  break;
+		case 7:
+		  p = "<div class='infos'><p>Good enough <br> is not good enough</p></div>";
+		  break;
+		case 8:
+		  p = "<div class='infos'><p>Your thoughts HERE</p></div>";
+		  break;
+		case 9:
+		  p = "<div class='infos'><p>Your thoughts HERE</p></div>";
+		  break;
+		case 0:
+		  p = "<div class='infos'><p>Your thoughts HERE</p></div>";
+		  break;
+		default:
+		  p = "";
+		}
+		var imgstr = "<img src='img/temp/img0" + n + ".jpg' />" + p;
+		document.getElementById("randomimg").innerHTML = imgstr;
+	</script>
+	<script>
+	   var warp_pro=document.getElementsByClassName("sharebox");
+	   for (i=0;i<warp_pro.length;i++)
+		{
+		 warp_pro[i].onmouseover=sharebox_action;
+		 warp_pro[i].onmouseout=sharebox_move;
+		 warp_pro[i].getElementsByClassName("shareicon")[0].style.display="none";
+		}
+       function sharebox_action(){
+		   this.getElementsByClassName("shareicon")[0].style.display="block";
+		   }
+		function sharebox_move(){
+		   this.getElementsByClassName("shareicon")[0].style.display="none";
+		   }
+       </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+@font-face {
+  font-family:'itcavantgardestd-bold';
+  src: url(../font/itcavantgardestd-bold.eot);
+  src: url(../font/itcavantgardestd-bold.eot) format('embedded-opentype'),
+	   url(../font/itcavantgardestd-bold.woff) format('woff'),
+	   url(../font/itcavantgardestd-bold.ttf) format('truetype'),
+	   url(../font/itcavantgardestd-bold.svg#ITCAvantGardeGothicStdBold) format('svg');
+  
+}
+@font-face {
+  font-family:'itcavantgardestd-demi';
+  src: url(../font/itcavantgardestd-demi.eot);
+  src: url(../font/itcavantgardestd-demi.eot) format('embedded-opentype'),
+	   url(../font/itcavantgardestd-demi.woff) format('woff'),
+	   url(../font/itcavantgardestd-demi.ttf) format('truetype'),
+	   url(../font/itcavantgardestd-demi.svg#ITCAvantGardeGothicStdDemi) format('svg');
+}
+@font-face {
+  font-family:'itcavantgardestd-md';
+  src: url(../font/itcavantgardestd-md.eot);
+  src: url(../font/itcavantgardestd-md.eot) format('embedded-opentype'),
+	   url(../font/itcavantgardestd-md.woff) format('woff'),
+	   url(../font/itcavantgardestd-md.ttf) format('truetype'),
+	   url(../font/itcavantgardestd-md.svg#ITCAvantGardeGothicStdMedium) format('svg');
+}
+@font-face {
+  font-family:'tcavantgardestd-bk';
+  src: url(../font/itcavantgardestd-bk.eot);
+  src: url(../font/itcavantgardestd-bk.eot) format('embedded-opentype'),
+	   url(../font/itcavantgardestd-bk.woff) format('woff'),
+	   url(../font/itcavantgardestd-bk.ttf) format('truetype'),
+	   url(../font/itcavantgardestd-bk.svg#ITCAvantGardeGothicStdBook) format('svg');
+}

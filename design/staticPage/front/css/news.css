@@ -1,0 +1,96 @@
+/*==========NEWS START==========*/
+/* wrapper css */
+#wrapper{
+	margin-top:70px;
+	width:100%;
+}
+#wrapper hgroup{
+	text-align:center;
+}
+#wrapper h2{
+	margin:5px 0;
+	color:#FF6D99;
+	text-shadow:1px 1px 2px #A50031;
+	font-size:33px;
+	font-family:Arial Narrow, Arial, sans-serif;
+}
+#wrapper h3{
+	font-style:italic;
+	font-weight:normal;
+	font-size:18px;
+	text-shadow:1px 1px 0 #fff;
+	color:#888;
+	margin:5px 0;
+}
+
+#container{
+	position:relative;
+	width:100%;
+	margin:0 auto 25px;
+	padding-bottom: 10px;
+	
+}
+.grid{
+	width:188px;
+	min-height:100px;
+	padding: 15px;
+	background:#fff;
+	margin:8px;
+	font-size:12px;
+	float:left;
+	
+	-webkit-transition: top 1s ease, left 1s ease;
+	-moz-transition: top 1s ease, left 1s ease;
+	-o-transition: top 1s ease, left 1s ease;
+	-ms-transition: top 1s ease, left 1s ease;
+	border-bottom: solid 2px #000;
+}
+.grid img.twitter{position:absolute; top:-6px;}
+.grid font {
+	font:lighter 22px/25px 'ITC Avant Garde Gothic Std'; color:#000;
+}
+.grid font.twitterfont{
+	margin:0 0 0 56px;
+}
+.grid strong {
+	margin:10px 0;
+	display:block;
+	padding:0 0 5px;
+	font:bold 30px/25px 'ITC Avant Garde Gothic Std';color:#000; 
+}
+.grid p {
+	font:22px/30px 'ITC Avant Garde Gothic Std';color:#333132; 
+}
+.grid p.news_twitter {
+	font:bolder 22px/30px 'ITC Avant Garde Gothic Std';color:#333132; 
+}
+.grid .meta{
+	text-align:right;
+	color:#777;
+	font-style:italic;
+}
+.grid .imgholder img{
+	max-width:100%;
+	background:#ccc;
+	display:block;
+}
+
+@media screen and (max-width : 1240px) {
+	body{
+		overflow:auto;
+	}
+}
+@media screen and (max-width : 900px) {
+	#backlinks{
+		float:none;
+		clear:both;
+	}
+	#backlinks a{
+		display:inline-block;
+		padding-right:20px;
+	}
+	#wrapper{
+		margin-top:90px;
+	}
+}
+/*==========NEWS END==========*/
