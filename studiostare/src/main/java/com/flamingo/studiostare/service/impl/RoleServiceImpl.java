@@ -3,7 +3,7 @@ package com.flamingo.studiostare.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.flamingo.studiostare.dao.RoleDao;
+import com.flamingo.studiostare.dao.IRoleDao;
 import com.flamingo.studiostare.entity.RoleEntity;
 import com.flamingo.studiostare.service.IRoleService;
 
@@ -11,7 +11,7 @@ import com.flamingo.studiostare.service.IRoleService;
 public class RoleServiceImpl implements IRoleService {
 
 	@Autowired
-	private RoleDao roleDao;
+	private IRoleDao roleDao;
 	
 	@Override
 	public RoleEntity getById(int id) {

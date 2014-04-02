@@ -3,7 +3,7 @@ package com.flamingo.studiostare.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.flamingo.studiostare.dao.UserDao;
+import com.flamingo.studiostare.dao.IUserDao;
 import com.flamingo.studiostare.entity.UserEntity;
 import com.flamingo.studiostare.service.IUserService;
 
@@ -11,7 +11,7 @@ import com.flamingo.studiostare.service.IUserService;
 public class UserServiceImpl implements IUserService {
 
 	@Autowired  
-    private UserDao userDao;  
+    private IUserDao userDao;  
 	
 	@Override
 	public UserEntity getById(int id) {

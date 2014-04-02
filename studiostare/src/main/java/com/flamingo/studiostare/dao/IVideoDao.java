@@ -3,12 +3,12 @@ package com.flamingo.studiostare.dao;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.flamingo.studiostare.entity.AboutEntity;
+import com.flamingo.studiostare.entity.VideoEntity;
 
 @Repository
 @Transactional
-public interface AboutDao {
+public interface IVideoDao {
 
-	AboutEntity getAboutById(int id);
+	VideoEntity getVideoById(int id);
 	
 }

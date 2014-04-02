@@ -3,12 +3,12 @@ package com.flamingo.studiostare.dao;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.flamingo.studiostare.entity.ClientEntity;
+import com.flamingo.studiostare.entity.RoleEntity;
 
 @Repository
 @Transactional
-public interface ClientDao {
+public interface IRoleDao {
 
-	ClientEntity getClientById(int id);
+	RoleEntity getRoleById(int id);
 	
 }

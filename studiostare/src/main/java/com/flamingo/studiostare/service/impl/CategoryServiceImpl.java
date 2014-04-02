@@ -3,7 +3,7 @@ package com.flamingo.studiostare.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.flamingo.studiostare.dao.CategoryDao;
+import com.flamingo.studiostare.dao.ICategoryDao;
 import com.flamingo.studiostare.entity.CategoryEntity;
 import com.flamingo.studiostare.service.ICategoryService;
 
@@ -11,7 +11,7 @@ import com.flamingo.studiostare.service.ICategoryService;
 public class CategoryServiceImpl implements ICategoryService {
 
 	@Autowired
-	private CategoryDao categoryDao;
+	private ICategoryDao categoryDao;
 	
 	@Override
 	public CategoryEntity getById(int id) {

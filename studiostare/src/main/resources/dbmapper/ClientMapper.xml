@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 这里的namespace名字必须为执行该sql的dao地址 -->
-<mapper namespace="com.flamingo.studiostare.dao.ClientDao">
+<mapper namespace="com.flamingo.studiostare.dao.IClientDao">
 
 	<resultMap type="ClientEntity" id="clientResultMap">
 		<id property="id" column="id" />
@@ -10,14 +10,62 @@
 		<result property="phone" column="phone" />
 		<result property="email" column="email" />
 		<result property="description" column="description" />
-		<result property="updateTime" column="update_time" />
+		<result property="updateTime" column="update_time" javaType="Date"/>
 	</resultMap>
 
-	<select id="getClientById" parameterType="int" resultType="ClientEntity"
-		resultMap="clientResultMap">
-        <![CDATA[ 
-            select * from client where id = #{id}
-        ]]>
+	<select id="selectClientById" parameterType="int" resultType="ClientEntity" resultMap="clientResultMap">
+		select * from client where id = #{id}
 	</select>
+	
+	<insert id="insertClient" parameterType="ClientEntity">
+		insert into client (name, phone, email, description) 
+		values (#{name}, #{phone}, #{email}, #{description})
+	</insert>
+	
+	<update id="updateClient" parameterType="ClientEntity">
+		update client set 
+			name = #{name},
+			phone = #{phone},
+			email = #{email},
+			description = #{description},
+			update_time = #{updateTime}
+		where id = #{id}
+	</update>
+	
+	<delete id="deleteClientById" parameterType="int">
+		delete from client where id = #{id}
+	</delete>
+	
+	<select id="selectClient" parameterType="ClientEntity" resultType="ClientEntity" resultMap="clientResultMap">
+		select * from client where 1 = 1 
+		<if test="name != null and name != ''">
+			and name like '%${name}%' 
+		</if>
+		<if test="phone != null and phone != ''">
+			and phone like '%${phone}%' 
+		</if>
+		<if test="email != null and email != ''">
+			and email like '%${email}%' 
+		</if>
+		<if test="description != null and description != ''">
+			and description like '%${description}%' 
+		</if>
+	</select>
+	
+	<delete id="deleteClient" parameterType="ClientEntity">
+		delete from client where 1 = 1
+		<if test="name != null and name != ''">
+			and name like '%${name}%' 
+		</if>
+		<if test="phone != null and phone != ''">
+			and phone like '%${phone}%' 
+		</if>
+		<if test="email != null and email != ''">
+			and email like '%${email}%' 
+		</if>
+		<if test="description != null and description != ''">
+			and description like '%${description}%' 
+		</if>
+	</delete>
 
 </mapper>

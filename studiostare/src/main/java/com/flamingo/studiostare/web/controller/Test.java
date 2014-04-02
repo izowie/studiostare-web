@@ -22,8 +22,8 @@ import com.flamingo.studiostare.service.IUserService;
 import com.flamingo.studiostare.service.IVideoRefService;
 import com.flamingo.studiostare.service.IVideoService;
 
-@Controller  
-@RequestMapping("test")  
+@Controller
+@RequestMapping("manage")
 public class Test {
 	
 	@Autowired
@@ -43,26 +43,26 @@ public class Test {
 	@Autowired
 	private IVideoRefService videoRefService;
 	
-	@RequestMapping("test.do")
+	@RequestMapping("test.html")
 	public ModelAndView test() {
 		ModelAndView m = new ModelAndView();
-		int id = 1;
-		AboutEntity aboutEntity = aboutService.getById(id);
-		CategoryEntity categoryEntity = categoryService.getById(id);
-		ClientEntity clientEntity = clientService.getById(id);
-		NewsEntity newsEntity = newsService.getById(id);
-		RoleEntity roleEntity = roleService.getById(id);
-		UserEntity userEntity = userService.getById(id);
-		VideoEntity videoEntity = videoService.getById(id);
-		VideoRefEntity videoRefEntity = videoRefService.getById(id);
-		m.addObject("about", aboutEntity == null ? new AboutEntity() : aboutEntity);
-		m.addObject("category", categoryEntity == null ? new CategoryEntity() : categoryEntity);
-		m.addObject("client", clientEntity == null ? new ClientEntity() : clientEntity);
-		m.addObject("news", newsEntity == null ? new NewsEntity() : newsEntity);
-		m.addObject("role", roleEntity == null ? new RoleEntity() : roleEntity);
-		m.addObject("user", userEntity == null ? new UserEntity() : userEntity);
-		m.addObject("video", videoEntity == null ? new VideoEntity() : videoEntity);
-		m.addObject("videoref", videoRefEntity == null ? new VideoRefEntity() : videoRefEntity);
+//		int id = 1;
+//		AboutEntity aboutEntity = aboutService.getById(id);
+//		CategoryEntity categoryEntity = categoryService.getById(id);
+//		ClientEntity clientEntity = clientService.getById(id);
+//		NewsEntity newsEntity = newsService.getById(id);
+//		RoleEntity roleEntity = roleService.getById(id);
+//		UserEntity userEntity = userService.getById(id);
+//		VideoEntity videoEntity = videoService.getById(id);
+//		VideoRefEntity videoRefEntity = videoRefService.getById(id);
+//		m.addObject("about", aboutEntity == null ? new AboutEntity() : aboutEntity);
+//		m.addObject("category", categoryEntity == null ? new CategoryEntity() : categoryEntity);
+//		m.addObject("client", clientEntity == null ? new ClientEntity() : clientEntity);
+//		m.addObject("news", newsEntity == null ? new NewsEntity() : newsEntity);
+//		m.addObject("role", roleEntity == null ? new RoleEntity() : roleEntity);
+//		m.addObject("user", userEntity == null ? new UserEntity() : userEntity);
+//		m.addObject("video", videoEntity == null ? new VideoEntity() : videoEntity);
+//		m.addObject("videoref", videoRefEntity == null ? new VideoRefEntity() : videoRefEntity);
 		m.setViewName("test");
 		return m;
 	}

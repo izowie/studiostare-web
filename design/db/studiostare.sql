@@ -23,7 +23,7 @@ USE `studiostare` ;
 DROP TABLE IF EXISTS `studiostare`.`role` ;
 
 CREATE TABLE IF NOT EXISTS `studiostare`.`role` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `description` VARCHAR(1024) NULL,
   PRIMARY KEY (`id`))
@@ -36,7 +36,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `studiostare`.`user` ;
 
 CREATE TABLE IF NOT EXISTS `studiostare`.`user` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL COMMENT '名称',
   `password` VARCHAR(255) NULL COMMENT '密码，非必填，管理员必填。',
   `email` VARCHAR(255) NULL,
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `studiostare`.`user` (
 DROP TABLE IF EXISTS `studiostare`.`client` ;
 
 CREATE TABLE IF NOT EXISTS `studiostare`.`client` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL COMMENT '名称',
   `phone` VARCHAR(255) NOT NULL COMMENT '电话',
   `email` VARCHAR(255) NOT NULL COMMENT '邮箱',
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `studiostare`.`client` (
 DROP TABLE IF EXISTS `studiostare`.`category` ;
 
 CREATE TABLE IF NOT EXISTS `studiostare`.`category` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL COMMENT '分类名称',
   `description` VARCHAR(1024) NULL COMMENT '描述',
   `update_time` TIMESTAMP NOT NULL COMMENT '更新时间',
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `studiostare`.`category` (
 DROP TABLE IF EXISTS `studiostare`.`video` ;
 
 CREATE TABLE IF NOT EXISTS `studiostare`.`video` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL COMMENT '名称',
   `img_path` VARCHAR(1024) NOT NULL COMMENT '视频预览图片地址',
   `video_path` VARCHAR(1024) NOT NULL COMMENT '视频地址',
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `studiostare`.`video` (
 DROP TABLE IF EXISTS `studiostare`.`videoref` ;
 
 CREATE TABLE IF NOT EXISTS `studiostare`.`videoref` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `video_id` INT NOT NULL COMMENT '视频ID',
   `client_id` INT NULL COMMENT '客户ID',
   `category_id` INT NULL COMMENT '分类ID',
@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `studiostare`.`videoref` (
 DROP TABLE IF EXISTS `studiostare`.`about` ;
 
 CREATE TABLE IF NOT EXISTS `studiostare`.`about` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `office_img_path` VARCHAR(1024) NOT NULL COMMENT '办公室照片地址',
   `about_us_info` VARCHAR(1024) NOT NULL COMMENT '关于我们',
   `manifesto` VARCHAR(1024) NOT NULL COMMENT '宣言',
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `studiostare`.`about` (
 DROP TABLE IF EXISTS `studiostare`.`news` ;
 
 CREATE TABLE IF NOT EXISTS `studiostare`.`news` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(255) NOT NULL COMMENT '新闻标题	',
   `content` VARCHAR(1024) NOT NULL COMMENT '新闻内容',
   `photo_path` VARCHAR(1024) NULL COMMENT '新闻照片地址，非必填',

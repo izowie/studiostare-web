@@ -3,12 +3,12 @@ package com.flamingo.studiostare.dao;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.flamingo.studiostare.entity.NewsEntity;
+import com.flamingo.studiostare.entity.UserEntity;
 
 @Repository
 @Transactional
-public interface NewsDao {
+public interface IUserDao {
 
-	NewsEntity getNewsById(int id);
+	UserEntity getUserById(int id);
 	
 }

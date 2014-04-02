@@ -7,7 +7,7 @@ import com.flamingo.studiostare.entity.VideoRefEntity;
 
 @Repository
 @Transactional
-public interface VideoRefDao {
+public interface IVideoRefDao {
 
 	VideoRefEntity getVideoRefById(int id);
 	

@@ -3,7 +3,7 @@ package com.flamingo.studiostare.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.flamingo.studiostare.dao.VideoDao;
+import com.flamingo.studiostare.dao.IVideoDao;
 import com.flamingo.studiostare.entity.VideoEntity;
 import com.flamingo.studiostare.service.IVideoService;
 
@@ -11,7 +11,7 @@ import com.flamingo.studiostare.service.IVideoService;
 public class VideoServiceImpl implements IVideoService {
 
 	@Autowired
-	private VideoDao videoDao;
+	private IVideoDao videoDao;
 	
 	@Override
 	public VideoEntity getById(int id) {

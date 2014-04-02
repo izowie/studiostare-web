@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 这里的namespace名字必须为执行该sql的dao地址 -->
-<mapper namespace="com.flamingo.studiostare.dao.VideoRefDao">
+<mapper namespace="com.flamingo.studiostare.dao.IVideoRefDao">
 
 	<resultMap type="VideoRefEntity" id="videoRefResultMap">
 		<id property="id" column="id" />

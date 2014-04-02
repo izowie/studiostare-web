@@ -7,7 +7,7 @@ import com.flamingo.studiostare.entity.CategoryEntity;
 
 @Repository
 @Transactional
-public interface CategoryDao {
+public interface ICategoryDao {
 
 	CategoryEntity getCategoryById(int id);
 	
