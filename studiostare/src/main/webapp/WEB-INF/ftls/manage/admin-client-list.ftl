@@ -165,7 +165,8 @@ Add New <i class="fa fa-plus"></i>
 <table class="table table-striped table-hover table-bordered" id="editable_client">
 <thead>
 <tr>
-<th>Client name</th>
+<!-- <th class="table-checkbox"><input type="checkbox" class="group-checkable" data-set="#editble_client .checkboxes"/></th> -->
+<th>Name</th>
 <th>Phone</th>
 <th>Email</th>
 <th>Description</th>
@@ -174,18 +175,34 @@ Add New <i class="fa fa-plus"></i>
 </tr>
 </thead>
 <tbody>
+<!--
 <tr>
 <td>client 1</td>
 <td>1234</td>
 <td>
-<!-- <a href="mailto:aa@gmail.com"> -->
+<a href="mailto:aa@gmail.com">
 aa@gmail.com
-<!-- </a> -->
+</a>
 </td>
 <td>description 1</td>
 <td><a class="edit" href="javascript:;"> Edit </a></td>
 <td><a class="delete" href="javascript:;"> Delete </a></td>
 </tr>
+-->
+<#list clientList as client>
+<tr>
+<!-- <td><input type="checkbox" class="checkboxes" value=${(client.id)!"0"}/></td> -->
+<td>${(client.name)!""}</td>
+<td>${(client.phone)!""}</td>
+<td>
+	<!-- <a href="${client.email}!"">${(client.email)!""}</a> -->
+	${(client.email)!""}
+</td>
+<td>${(client.description)!""}</td>
+<td><a class="edit" href="javascript:;"> Edit </a></td>
+<td><a class="delete" href="javascript:;"> Delete </a></td>
+</tr>
+</#list>
 </tbody>
 </table>
 </div>

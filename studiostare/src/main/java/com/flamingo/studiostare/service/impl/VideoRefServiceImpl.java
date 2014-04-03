@@ -15,7 +15,7 @@ public class VideoRefServiceImpl implements IVideoRefService {
 	
 	@Override
 	public VideoRefEntity getById(int id) {
-		return videoRefDao.getVideoRefById(id);
+		return videoRefDao.selectVideoRefById(id);
 	}
 
 }

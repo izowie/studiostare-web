@@ -9,14 +9,55 @@
 		<result property="officeImgPath" column="office_img_path" />
 		<result property="aboutUsInfo" column="about_us_info" />
 		<result property="manifesto" column="manifesto" />
-		<result property="updateTime" column="update_time" />
+		<result property="updateTime" column="update_time" javaType="Date" />
 	</resultMap>
 
-	<select id="getAboutById" parameterType="int" resultType="AboutEntity"
-		resultMap="aboutResultMap">
-        <![CDATA[ 
-            select * from about where id = #{id}
-        ]]>
+	<select id="selectAboutById" parameterType="int" resultType="AboutEntity" resultMap="aboutResultMap">
+		select * from about where id = #{id}
 	</select>
+	
+	<insert id="insertAbout" parameterType="AboutEntity">
+		insert into about (office_img_path, about_us_info, manifesto) 
+		values (#{officeImgPath}, #{aboutUsInfo}, #{manifesto})
+	</insert>
+	
+	<update id="updateAbout" parameterType="AboutEntity">
+		update about set 
+			office_img_path = #{officeImgPath}, 
+			about_us_info = #{aboutUsInfo}, 
+			manifesto = #{manifesto}, 
+			update_time = #{updateTime}
+		where id = #{id}
+	</update>
+	
+	<delete id="deleteAboutById" parameterType="int">
+		delete from about where id = #{id}
+	</delete>
+	
+	<select id="selectAbout" parameterType="AboutEntity" resultType="AboutEntity" resultMap="aboutResultMap">
+		select * from about where 1 = 1 
+		<if test="officeImgPath != null and officeImgPath != ''">
+			and office_img_path like '%officeImgPath%' 
+		</if>
+		<if test="aboutUsInfo != null and aboutUsInfo != ''">
+			and about_us_info like '%aboutUsInfo%' 
+		</if>
+		<if test="manifesto != null and manifesto != ''">
+			and manifesto like '%manifesto%' 
+		</if>
+	</select>
+	
+	<delete id="deleteAbout" parameterType="AboutEntity">
+		delete from about where 1 = 1 
+		<if test="officeImgPath != null and officeImgPath != ''">
+			and office_img_path like '%officeImgPath%' 
+		</if>
+		<if test="aboutUsInfo != null and aboutUsInfo != ''">
+			and about_us_info like '%aboutUsInfo%' 
+		</if>
+		<if test="manifesto != null and manifesto != ''">
+			and manifesto like '%manifesto%' 
+		</if>
+	</delete>
 
 </mapper>

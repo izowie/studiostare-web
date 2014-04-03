@@ -15,7 +15,7 @@ public class NewsServiceImpl implements INewsService {
 	
 	@Override
 	public NewsEntity getById(int id) {
-		return newsDao.getNewsById(id);
+		return newsDao.selectNewsById(id);
 	}
 
 }

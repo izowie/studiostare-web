@@ -6,7 +6,11 @@ import com.flamingo.studiostare.entity.ClientEntity;
 
 public interface IClientService {
 	
+	ClientEntity getClientById(int id);
+	
 	List<ClientEntity> getClient(ClientEntity clientEntity);
+	
+	List<ClientEntity> getAllClient();
 	
 	void addClient(ClientEntity clientEntity);
 	

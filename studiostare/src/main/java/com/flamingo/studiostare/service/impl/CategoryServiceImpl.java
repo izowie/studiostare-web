@@ -15,7 +15,7 @@ public class CategoryServiceImpl implements ICategoryService {
 	
 	@Override
 	public CategoryEntity getById(int id) {
-		return categoryDao.getCategoryById(id);
+		return categoryDao.selectCategoryById(id);
 	}
 
 }

@@ -15,7 +15,7 @@ public class AboutServiceImpl implements IAboutService {
 	
 	@Override
 	public AboutEntity getById(int id) {
-		return aboutDao.getAboutById(id);
+		return aboutDao.selectAboutById(id);
 	}
 
 }

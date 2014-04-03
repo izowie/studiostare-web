@@ -16,11 +16,18 @@ public class ClientServiceImpl implements IClientService {
 	private IClientDao clientDao;
 	
 	@Override
+	public ClientEntity getClientById(int id){
+		return clientDao.selectClientById(id);
+	}
+	
+	@Override
 	public List<ClientEntity> getClient(ClientEntity clientEntity) {
-		int id = clientEntity.getId();
-		if(id != 0)
-			return clientDao.selectClientById(id);
-		return clientDao.selectClient();
+		return clientDao.selectClient(clientEntity);
+	}
+	
+	@Override
+	public List<ClientEntity> getAllClient(){
+		return clientDao.selectClient(new ClientEntity());
 	}
 
 	@Override
@@ -41,7 +48,5 @@ public class ClientServiceImpl implements IClientService {
 		else
 			clientDao.deleteClient(clientEntity);
 	}
-
-	
 
 }

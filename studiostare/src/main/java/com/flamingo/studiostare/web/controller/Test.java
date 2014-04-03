@@ -1,5 +1,7 @@
 package com.flamingo.studiostare.web.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,7 +45,7 @@ public class Test {
 	@Autowired
 	private IVideoRefService videoRefService;
 	
-	@RequestMapping("test.html")
+	@RequestMapping("test.do")
 	public ModelAndView test() {
 		ModelAndView m = new ModelAndView();
 //		int id = 1;
@@ -64,6 +66,17 @@ public class Test {
 //		m.addObject("video", videoEntity == null ? new VideoEntity() : videoEntity);
 //		m.addObject("videoref", videoRefEntity == null ? new VideoRefEntity() : videoRefEntity);
 		m.setViewName("test");
+		return m;
+	}
+	
+	@RequestMapping("test-client.html")
+	public ModelAndView testClient() {
+		ModelAndView m = new ModelAndView();
+		ClientEntity clientEntity = new ClientEntity();
+		List<ClientEntity> clientList = clientService.getClient(clientEntity);
+		m.addObject("clientList", clientList);
+		m.setViewName("manage/admin-client-list");
+//		m.setViewName("test");
 		return m;
 	}
 	

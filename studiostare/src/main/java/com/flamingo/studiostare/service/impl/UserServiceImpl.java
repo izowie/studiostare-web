@@ -15,7 +15,7 @@ public class UserServiceImpl implements IUserService {
 	
 	@Override
 	public UserEntity getById(int id) {
-        return userDao.getUserById(id);
+        return userDao.selectUserById(id);
 	}
 
 	@Override

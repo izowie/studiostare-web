@@ -13,11 +13,59 @@
 		<result property="updateTime" column="update_time" />
 	</resultMap>
 
-	<select id="getVideoRefById" parameterType="int" resultType="VideoRefEntity"
-		resultMap="videoRefResultMap">
-        <![CDATA[ 
-            select * from videoref where id = #{id}
-        ]]>
+	<select id="selectVideoRefById" parameterType="int" resultType="VideoRefEntity" resultMap="videoRefResultMap">
+		select * from videoref where id = #{id}
 	</select>
+	
+	<insert id="insertVideoRef" parameterType="VideoRefEntity">
+		insert into videoref (video_id, client_id, category_id, description)
+		values (#{videoId}, #{clientId}, #{categoryId}, #{description})
+	</insert>
+	
+	<update id="updateVideoRef" parameterType="VideoRefEntity">
+		update videoref set
+			video_id = #{videoId}, 
+			client_id = #{clientId}, 
+			category_id = #{categoryId}, 
+			description = #{description}, 
+			update_time = #{updateTime}
+		where id = #{id}
+	</update>
+	
+	<delete id="deleteVideoRefById" parameterType="int">
+		delete from videoref where id = #{id} 
+	</delete>
+	
+	<select id="selectVideoRef" parameterType="VideoRefEntity" resultType="VideoRefEntity" resultMap="videoRefResultMap">
+		select * from videoref where 1 = 1 
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId} 
+		</if>
+		<if test="clientId != null and clientId != 0">
+			and client_id = #{clientId} 
+		</if>
+		<if test="categoryId != null and categoryId != 0">
+			and category_id = #{categoryId} 
+		</if>
+		<if test="description != null and description != ''">
+			and description like '%${description}%' 
+		</if>
+	</select>
+	
+	<delete id="deleteVideoRef" parameterType="VideoRefEntity">
+		delete from videoref where 1 = 1 
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId} 
+		</if>
+		<if test="clientId != null and clientId != 0">
+			and client_id = #{clientId} 
+		</if>
+		<if test="categoryId != null and categoryId != 0">
+			and category_id = #{categoryId} 
+		</if>
+		<if test="description != null and description != ''">
+			and description like '%${description}%' 
+		</if>
+	</delete>
 
 </mapper>

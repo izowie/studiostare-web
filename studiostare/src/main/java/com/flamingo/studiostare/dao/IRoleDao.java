@@ -1,5 +1,7 @@
 package com.flamingo.studiostare.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,6 +11,16 @@ import com.flamingo.studiostare.entity.RoleEntity;
 @Transactional
 public interface IRoleDao {
 
-	RoleEntity getRoleById(int id);
-	
+	RoleEntity selectRoleById(int id);
+
+	void insertRole(RoleEntity roleEntity);
+
+	void updateRole(RoleEntity roleEntity);
+
+	void deleteRoleById(int id);
+
+	List<RoleEntity> selectRole(RoleEntity roleEntity);
+
+	void deleteRole(RoleEntity roleEntity);
+
 }

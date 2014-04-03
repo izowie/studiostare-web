@@ -10,11 +10,24 @@
 		<result property="description" column="description" />
 	</resultMap>
 
-	<select id="getRoleById" parameterType="int" resultType="RoleEntity"
-		resultMap="roleResultMap">
-        <![CDATA[ 
-            select * from role where id = #{id}
-        ]]>
+	<select id="selectRoleById" parameterType="int" resultType="RoleEntity" resultMap="roleResultMap">
+		select * from role where id = #{id}
 	</select>
+	
+	<insert id="insertRole" parameterType="RoleEntity">
+		insert into role (name, description)
+		values (#{name}, #{description})
+	</insert>
+	
+	<update id="updateRole" parameterType="RoleEntity">
+		update role set
+			name = #{name}, 
+			description = #{description}
+		where id = #{id}
+	</update>
+	
+	<delete id="deleteRole" parameterType="int">
+		delete from role where id = #{id}
+	</delete>
 
 </mapper>

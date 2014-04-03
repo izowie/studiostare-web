@@ -11,14 +11,68 @@
 		<result property="photoPath" column="photo_path" />
 		<result property="videoPath" column="video_path" />
 		<result property="userId" column="user_id" />
-		<result property="updateTime" column="update_time" />
+		<result property="updateTime" column="update_time" javaType="Date" />
 	</resultMap>
 
-	<select id="getNewsById" parameterType="int" resultType="NewsEntity"
-		resultMap="newsResultMap">
-        <![CDATA[ 
-            select * from news where id = #{id}
-        ]]>
+	<select id="selectNewsById" parameterType="int" resultType="NewsEntity" resultMap="newsResultMap">
+		select * from news where id = #{id}
 	</select>
+	
+	<insert id="insertNews" parameterType="NewsEntity">
+		insert into news (title, content, photo_path, video_path, user_id)
+		values (#{title}, #{content}, #{photoPath}, #{videoPath}, #{userId})
+	</insert>
+	
+	<update id="updateNews" parameterType="NewsEntity">
+		update news set 
+			title = #{title}, 
+			content = #{content}, 
+			photo_path = #{photoPath}, 
+			video_path = #{videoPath}, 
+			update_time = #{updateTime} 
+		where id = #{id}
+	</update>
+	
+	<delete id="deleteNewsById" parameterType="int">
+		delete from news where id = #{id} 
+	</delete>
+	
+	<select id="selectNews" parameterType="NewsEntity" resultType="NewsEntity" resultMap="newsResultMap">
+		select * from news where 1 = 1 
+		<if test="title != null and title != ''">
+			and title like '%${title}%' 
+		</if>
+		<if test="content != null and content != ''">
+			and content like '%${content}%' 
+		</if>
+		<if test="photoPath != null and photoPath != ''">
+			and photo_path like '%${photoPath}%' 
+		</if>
+		<if test="videoPath != null and videoPath != ''">
+			and video_path like '%${videoPath}%' 
+		</if>
+		<if test="userId != 0">
+			and user_id = #{userId} 
+		</if>
+	</select>
+	
+	<delete id="deleteNews" parameterType="NewsEntity">
+		delete from news where 1 = 1 
+		<if test="title != null and title != ''">
+			and title like '%${title}%' 
+		</if>
+		<if test="content != null and content != ''">
+			and content like '%${content}%' 
+		</if>
+		<if test="photoPath != null and photoPath != ''">
+			and photo_path like '%${photoPath}%' 
+		</if>
+		<if test="videoPath != null and videoPath != ''">
+			and video_path like '%${videoPath}%' 
+		</if>
+		<if test="userId != 0">
+			and user_id = #{userId} 
+		</if>
+	</delete>
 
 </mapper>

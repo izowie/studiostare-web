@@ -11,7 +11,7 @@ import com.flamingo.studiostare.entity.ClientEntity;
 @Transactional
 public interface IClientDao {
 
-	List<ClientEntity> selectClientById(int id);
+	ClientEntity selectClientById(int id);
 	
 	void insertClient(ClientEntity clientEntity);
 	
@@ -19,7 +19,7 @@ public interface IClientDao {
 	
 	void deleteClientById(int id);
 
-	List<ClientEntity> selectClient();
+	List<ClientEntity> selectClient(ClientEntity clientEntity);
 
 	void deleteClient(ClientEntity clientEntity);
 	

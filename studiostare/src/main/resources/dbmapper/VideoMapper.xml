@@ -9,14 +9,55 @@
 		<result property="name" column="name" />
 		<result property="videoPath" column="video_path" />
 		<result property="description" column="description" />
-		<result property="updateTime" column="update_time" />
+		<result property="updateTime" column="update_time" javaType="Date" />
 	</resultMap>
 
-	<select id="getVideoById" parameterType="int" resultType="VideoEntity"
-		resultMap="videoResultMap">
-        <![CDATA[ 
-            select * from video where id = #{id}
-        ]]>
+	<select id="selectVideoById" parameterType="int" resultType="VideoEntity" resultMap="videoResultMap">
+		select * from video where id = #{id}
 	</select>
+	
+	<insert id="insertVideo" parameterType="VideoEntity">
+		insert into video (name, video_path, description)
+		values (#{name}, #{videoPath}, #{description})
+	</insert>
+	
+	<update id="updateVideo" parameterType="VideoEntity">
+		update video set 
+			name = #{name}, 
+			video_path = #{videoPath},
+			description = #{description}, 
+			update_time = #{updateTime}
+		where id = #{id}
+	</update>
+	
+	<delete id="deleteVideoById" parameterType="int">
+		delete from video where id = #{id}
+	</delete>
+	
+	<select id="selectVideo" parameterType="VideoEntity" resultType="VideoEntity" resultMap="videoResultMap">
+		select * from video where 1 = 1
+		<if test="name != null and name != ''">
+			and name like '%${name}' 
+		</if>
+		<if test="videoPath != null and videoPath != ''">
+			and video_path like '%${videoPath}' 
+		</if>
+		<if test="description != null and description != ''">
+			and description like '%${description}' 
+		</if>
+	</select>
+	
+	<delete id="deleteVideo" parameterType="VideoEntity">
+		delete from video where 1 = 1 
+		<if test="name != null and name != ''">
+			and name like '%${name}' 
+		</if>
+		<if test="videoPath != null and videoPath != ''">
+			and video_path like '%${videoPath}' 
+		</if>
+		<if test="description != null and description != ''">
+			and description like '%${description}' 
+		</if>
+	</delete>
 
 </mapper>

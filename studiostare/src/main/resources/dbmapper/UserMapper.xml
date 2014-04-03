@@ -12,14 +12,69 @@
 		<result property="roleId" column="role_id" />
 		<result property="captureNewsFlag" column="capture_news_flag" />
 		<result property="twitterUser" column="twitter_user" />
-		<result property="updateTime" column="update_time" />
+		<result property="updateTime" column="update_time" javaType="Date" />
 	</resultMap>
 
-	<select id="getUserById" parameterType="int" resultType="UserEntity"
-		resultMap="userResultMap">
-        <![CDATA[ 
-            select * from user where id = #{id}
-        ]]>
+	<select id="selectUserById" parameterType="int" resultType="UserEntity" resultMap="userResultMap">
+		select * from user where id = #{id}
 	</select>
+	
+	<insert id="insertUser" parameterType="UserEntity">
+		insert into user (name, password, email, role_id, capture_news_flag, twitter_user)
+		values (#{name}, #{password}, #{email}, #{roleId}, #{captureNewsFlag}, #{twitterUser})
+	</insert>
+	
+	<update id="updateUser" parameterType="UserEntity">
+		update user set
+			name = #{name}, 
+			password = #{password}, 
+			email = #{email}, 
+			role_id = #{roleId}, 
+			capture_news_flag = #{captureNewsFlag}, 
+			twitter_uesr = #{twitterUser}
+		where id = #{id}
+	</update>
+	
+	<delete id="deleteUserById" parameterType="int">
+		delete from user where id = #{id}
+	</delete>
+	
+	<select id="selectUser" parameterType="UserEntity" resultType="UserEntity" resultMap="userResultMap">
+		select * from user where 1 = 1 
+		<if test="name != null and name != ''">
+			and name like '%${name}%' 
+		</if>
+		<if test="email != null and email != ''">
+			and email like '%${email}%' 
+		</if>
+		<if test="twitterUser != null and twitterUser != ''">
+			and twitter_user like '%${twitterUser}%' 
+		</if>
+		<if test="roleId != null and roleId != 0">
+			and role_id = #{roleId} 
+		</if>
+		<if test="captureNewsFlag != null and captureNewsFlag != 0">
+			and capture_news_flag = #{captureNewsFlag} 
+		</if>
+	</select>
+	
+	<delete id="deleteUser" parameterType="UserEntity">
+		delete from user where 1 = 1 
+		<if test="name != null and name != ''">
+			and name like '%${name}%' 
+		</if>
+		<if test="email != null and email != ''">
+			and email like '%${email}%' 
+		</if>
+		<if test="twitterUser != null and twitterUser != ''">
+			and twitter_user like '%${twitterUser}%' 
+		</if>
+		<if test="roleId != null and roleId != 0">
+			and role_id = #{roleId} 
+		</if>
+		<if test="captureNewsFlag != null and captureNewsFlag != 0">
+			and capture_news_flag = #{captureNewsFlag} 
+		</if>
+	</delete>
 
 </mapper>
